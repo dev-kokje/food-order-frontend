@@ -1,0 +1,30 @@
+.itemName {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+    margin-bottom: 0rem !important;
+}
+
+.itemPrice {
+    font-weight: bold;
+    font-size: 15px;
+    color: brown;
+}
+
+.itemTotalPrice {
+    font-weight: bold;
+    font-size: 20px;
+    color: brown;
+    margin: 0px;
+}
+
+.itemCount {
+    border-radius: 0px;
+    width: 3rem;
+    border: 1px solid;
+    text-align: center;
+}
+
+.itemCount:focus {
+    box-shadow: none;
+}
