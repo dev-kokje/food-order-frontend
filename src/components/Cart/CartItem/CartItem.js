@@ -31,25 +31,16 @@ const CartItem = (props) => {
         <Col md={1} className="d-none d-md-flex flex-row align-items-center">
             <X/>
         </Col>
-        <Col xs={5} md={3} className="d-flex flex-row align-items-center">
-            {
-                props.item.amount === 1 ? 
-                <Button 
-                    size="sm" 
-                    variant="outline-secondary" 
-                    className="rounded-circle" 
-                    onClick={() => updateItem('REMOVE')}>
-                        <Trash/>
-                </Button> 
-                : 
-                <Button 
-                    size="sm" 
-                    variant="outline-secondary" 
-                    className="rounded-circle"
-                    onClick={() => updateItem('REMOVE')}>
-                        <Dash/>
-                </Button>
-            }
+        <Col xs={5} md={3} className="d-flex flex-row align-items-center"> 
+            <Button 
+                size="sm" 
+                variant="outline-secondary" 
+                className="rounded-circle" 
+                onClick={() => updateItem('REMOVE')}>
+                    {
+                        props.item.amount === 1 ? <Trash/> : <Dash />
+                    }
+            </Button>
             <Form.Control 
                 readOnly
                 type="number"

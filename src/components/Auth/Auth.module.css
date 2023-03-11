@@ -1,9 +1,9 @@
 .modalHeader {
     border-bottom: 0 none !important;
+    border-top: 0 none !important;
 }
 
 .linkBtn {
-    margin-top: -0.2rem;
     text-decoration: none;
-    padding-left: 0.3rem !important;
+    padding-left: 0rem !important;
 }
