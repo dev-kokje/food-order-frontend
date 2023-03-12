@@ -75,7 +75,11 @@ const SignIn = (props) => {
                             Please enter a valid password
                         </Form.Control.Feedback>
                         <Form.Text>
-                            <Button variant="link" className="p-0 m-0 text-muted">
+                            <Button 
+                                variant="link" 
+                                className="p-0 m-0 text-muted"
+                                onClick={() => props.changeAction("resetPassword")}
+                                >
                                 <small>Forgot password?</small>
                             </Button>
                         </Form.Text>

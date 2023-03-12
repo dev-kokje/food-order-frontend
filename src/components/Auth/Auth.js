@@ -1,7 +1,9 @@
 import { useContext, useState } from "react"
 import { Button, Modal } from "react-bootstrap"
+import { ArrowLeftShort } from "react-bootstrap-icons"
 import AuthContext from "../../store/auth-context"
 import styles from "./Auth.module.css"
+import ResetPassword from "./ResetPassword"
 import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 
@@ -27,7 +29,10 @@ const Auth = (props) => {
                 action === 'signup' && <SignUp />
             }
             {
-                action === 'signin' && <SignIn />
+                action === 'signin' && <SignIn changeAction={changeAction} />
+            }
+            {
+                action === 'resetPassword' && <ResetPassword />
             }
         </Modal.Body>
         <Modal.Footer className="justify-content-center pb-4">
@@ -38,9 +43,12 @@ const Auth = (props) => {
                 {
                     action === 'signin' && 'Don\'t have an account?'
                 }
+                {
+                    action === 'resetPassword' && <span><ArrowLeftShort /> Back to</span>
+                }
             </h6>
             {
-                action === 'signup' &&
+                action !== 'signin' &&
                 <Button variant="link" onClick={() => changeAction('signin')} className={styles.linkBtn + " text-primary p-0 mx-0"}>
                     Sign in
                 </Button>

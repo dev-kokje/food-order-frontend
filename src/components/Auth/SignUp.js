@@ -113,6 +113,7 @@ const SignUp = (props) => {
                             value={confirmPassword}
                             onChange={confirmPasswordChangeHandler}
                             required
+                            pattern={password}
                             />
                         <Form.Control.Feedback type="invalid">
                             Confirm password not matching
