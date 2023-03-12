@@ -1,0 +1,7 @@
+.inputField {
+    border-radius: 0;
+}
+
+.inputField :focus {
+    box-shadow: none;
+}

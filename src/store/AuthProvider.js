@@ -7,7 +7,6 @@ const defaultAuthState = {
 
 const authReducer = (state, action) => {
     if(action.type === 'TOGGLE_AUTH_FORM') {
-        console.log("Set show auth called")
         return {
             showAuth: !state.showAuth
         }
